@@ -18,27 +18,15 @@ cd open-vm-tools/open-vm-tools
 
 autoreconf -i
 ./configure
-
-<< COMMENT
 make
 make install
 ldconfig
 
-cat > /etc/systemd/system/vmtoolsd.service << EOL
-[Unit]
-Description=Service for virtual machines hosted on VMware
-Documentation=https://github.com/vmware/open-vm-tools
-ConditionVirtualization=vmware
-After=vgauth.service
-Before=cloud-init-local.service
-DefaultDependencies=no
+ln -s /usr/local/bin/vmtoolsd /usr/bin/vmtoolsd
+ln -s /usr/local/bin/VGAuthService /usr/bin/VGAuthService
 
-[Service]
-ExecStart=/usr/local/bin/vmtoolsd
-TimeoutStopSec=5
+cd ../../
 
-[Install]
-WantedBy=multi-user.target
-Also=vgauthd.service
-EOL
-COMMENT
+cat ./usr/lib/systemd/system/vmtoolsd.service > /usr/lib/systemd/system/vmtoolsd.service
+cat ./usr/lib/systemd/system/vgauthd.service > /usr/lib/systemd/system/vgauthd.service
+cat ./usr/lib/udev/99-vmware-scsi-udev.rules > /usr/lib/udev/99-vmware-scsi-udev.rules
