@@ -16,7 +16,7 @@ dnf install -y git
 git clone https://github.com/vmware/open-vm-tools.git
 cd open-vm-tools/open-vm-tools
 
-autoreconf
+autoreconf -i
 ./configure
 
 << COMMENT
