@@ -1,6 +1,7 @@
 # open-vm-tools installation script for CentOS 8 aarch64
 
 This script installs some dependencies. See the script for details.
+
 Note: Not for production use, testing purpose only.
 
 # Usage
