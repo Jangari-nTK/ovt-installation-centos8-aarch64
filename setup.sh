@@ -18,12 +18,15 @@ cd open-vm-tools/open-vm-tools
 autoreconf -i
 mkdir build
 cd build
-../configure --prefix=/usr
+../configure
 make
 make install
 ldconfig
 
 cd ../../../
+
+ln -s /usr/local/bin/VGAuthService /usr/bin/VGAuthService
+ln -s /usr/local/bin/VGAuthService /usr/bin/VGAuthService
 
 cp ./usr/lib/systemd/system/vmtoolsd.service /usr/lib/systemd/system/vmtoolsd.service
 cp ./usr/lib/systemd/system/vgauthd.service /usr/lib/systemd/system/vgauthd.service
