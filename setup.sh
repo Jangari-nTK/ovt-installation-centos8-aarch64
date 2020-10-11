@@ -25,9 +25,9 @@ ldconfig
 
 cd ../../../
 
-cat ./usr/lib/systemd/system/vmtoolsd.service > /usr/lib/systemd/system/vmtoolsd.service
-cat ./usr/lib/systemd/system/vgauthd.service > /usr/lib/systemd/system/vgauthd.service
-cat ./usr/lib/udev/99-vmware-scsi-udev.rules > /usr/lib/udev/99-vmware-scsi-udev.rules
+cp ./usr/lib/systemd/system/vmtoolsd.service /usr/lib/systemd/system/vmtoolsd.service
+cp ./usr/lib/systemd/system/vgauthd.service /usr/lib/systemd/system/vgauthd.service
+cp ./usr/lib/udev/99-vmware-scsi-udev.rules /usr/lib/udev/99-vmware-scsi-udev.rules
 
 systemctl daemon-reload
 systemctl enable vgauthd.service
