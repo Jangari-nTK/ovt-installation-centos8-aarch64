@@ -25,7 +25,7 @@ ldconfig
 
 cd ../../../
 
-ln -s /usr/local/bin/VGAuthService /usr/bin/VGAuthService
+ln -s /usr/local/bin/vmtoolsd /usr/bin/vmtoolsd
 ln -s /usr/local/bin/VGAuthService /usr/bin/VGAuthService
 
 cp ./usr/lib/systemd/system/vmtoolsd.service /usr/lib/systemd/system/vmtoolsd.service
