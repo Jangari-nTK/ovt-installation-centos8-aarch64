@@ -8,9 +8,7 @@ DefaultDependencies=no
 Before=cloud-init-local.service
 
 [Service]
-Type=forking
-PIDFile=/var/run/vmtoolsd.pid
-ExecStart=/usr/bin/vmtoolsd --background /var/run/vmtoolsd.pid
+ExecStart=/usr/bin/vmtoolsd
 TimeoutStopSec=5
 
 [Install]
