@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sed -i -e "s/enabled = 1/enabled = 0/g" /etc/yum.repos.d/CentOS-PowerTools.repo
+sed -i -e "s/enabled = 0/enabled = 1/g" /etc/yum.repos.d/CentOS-PowerTools.repo
 
 dnf group install -y "Development Tools"
 
