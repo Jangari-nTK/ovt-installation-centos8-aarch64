@@ -17,5 +17,5 @@ $ git clone https://github.com/Jangari-nTK/ovt-installation-centos8-aarch64.git
 ```
 $ cd ovt-installation-centos8-aarch64
 $ chmod +x setup.sh
-$ sudo setup.sh
+$ sudo ./setup.sh
 ```
