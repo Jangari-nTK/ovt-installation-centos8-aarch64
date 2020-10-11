@@ -31,7 +31,7 @@ ln -s /usr/local/bin/vmtoolsd /usr/bin/vmtoolsd
 ln -s /usr/local/bin/VGAuthService /usr/bin/VGAuthService
 cp ./usr/lib/systemd/system/vmtoolsd.service /usr/lib/systemd/system/vmtoolsd.service
 cp ./usr/lib/systemd/system/vgauthd.service /usr/lib/systemd/system/vgauthd.service
-cp ./usr/lib/udev/99-vmware-scsi-udev.rules /usr/lib/udev/99-vmware-scsi-udev.rules
+cp ./usr/lib/udev/rules.d/99-vmware-scsi-udev.rules /usr/lib/udev/rules.d/99-vmware-scsi-udev.rules
 
 # Enable and start services.
 systemctl daemon-reload
