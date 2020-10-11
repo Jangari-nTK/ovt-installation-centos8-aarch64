@@ -16,14 +16,12 @@ git clone https://github.com/vmware/open-vm-tools.git
 cd open-vm-tools/open-vm-tools
 
 autoreconf -i
-mkdir build
-cd build
-../configure
+./configure
 make
 make install
 ldconfig
 
-cd ../../../
+cd ../../
 
 ln -s /usr/local/bin/vmtoolsd /usr/bin/vmtoolsd
 ln -s /usr/local/bin/VGAuthService /usr/bin/VGAuthService
